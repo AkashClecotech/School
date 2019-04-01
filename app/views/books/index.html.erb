@@ -1,0 +1,8 @@
+<h1>Books</h1>
+<div>
+  <% @book.each do |book|%>
+  <%= book.name %><br>
+  <%end%>
+</div>
+
+<p><%= link_to "Home", welcome_index_path %></p>

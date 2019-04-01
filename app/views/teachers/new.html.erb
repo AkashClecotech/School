@@ -1,0 +1,14 @@
+<h1>Add Teacher</h1>
+
+<%= form_for @teachers, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+   <%= f.label :name %> <br>
+    <%= f.text_field :name %>
+
+    <%= f.label :select_students %> <br>
+    <%= f.select :student_ids, @student.collect {|u| [u.name, u.id]}, {:prompt => 'student'}%> <br>
+
+  <%= f.submit "Create" %>
+
+  <% end %>
+
+<p><%= link_to "Home", welcome_index_path %></p>

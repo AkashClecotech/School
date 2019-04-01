@@ -1,0 +1,14 @@
+<h1>New Book</h1>
+<%= form_for [@lib, @book] do |f|%>
+
+
+  <%= f.label :book %><br>
+  <%#= f.select :bookable_id, @books.collect {|u| [u.name, u.id]}, {:prompt => 'Select book'}%> 
+
+
+  <%= f.text_field :name %>
+
+  <%= f.submit "Create" %>
+<%end%>
+
+<p><%= link_to "Home", welcome_index_path %></p>

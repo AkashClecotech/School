@@ -1,0 +1,17 @@
+
+
+<h1>school list</h1>
+
+<p>__________________________</p>
+<div>
+  <% @schools.each do |school|%>
+  <%= link_to do %>
+  <strong><%= school.name %></strong>
+<% end %><br>
+  <%end%>
+</div>
+
+<p>__________________________</p>
+<p><%= link_to "Add School", new_school_path %></p>
+
+  <p><%= link_to "Home", welcome_index_path %></p>
